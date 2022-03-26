@@ -1,0 +1,113 @@
+.flex {
+  display: flex;
+}
+
+.flex-inner {
+  width: 50%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+body .topper {
+  height: 70vh;
+}
+@media only screen and (max-width: 700px) {
+  body .topper {
+    height: auto;
+  }
+}
+body .topper h1 {
+  font-size: 80px;
+  max-width: 800px;
+  margin: auto;
+  display: block;
+  margin-top: 30vh;
+  text-align: center;
+}
+body .topper h1 span {
+  background-color: #FFCDCD;
+}
+body .topper p {
+  font-family: "Open Sans", sans-serif;
+  max-width: 800px;
+  margin: auto;
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 20px;
+}
+body .topper img {
+  width: 350px;
+  margin: auto;
+  display: block;
+  margin-top: 30px;
+}
+body .topNav {
+  background: black;
+  color: white;
+  overflow: hidden;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  top: 0px;
+}
+body .topNav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 17px;
+}
+body .topNav a.left {
+  float: left;
+  font-weight: bold;
+  font-size: 30px;
+  position: absolute;
+  padding-top: 10px;
+}
+body .topNav a.left .title {
+  font-weight: normal;
+  font-size: 20px;
+  padding-left: 15px;
+}
+body .topNav a.left:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+}
+body .topNav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+body .topNav a.active {
+  background-color: #444444;
+  color: white;
+}
+body .image-caption {
+  font-size: 12px;
+  color: grey;
+  margin-top: 0px;
+}
+body #container {
+  margin: auto;
+  display: block;
+  max-width: 700px;
+}
+body #container p {
+  font-family: Georgia, serif;
+  line-height: 1.55;
+  font-size: 1.125rem;
+  color: #333;
+}
+body #container p span {
+  background-color: #FFCDCD;
+}
+body #container #how .flex img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
