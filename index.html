@@ -6,6 +6,9 @@
 		<meta name="keywords" content="VI-SPDAT Bias Homeless Risk assessment gender race white black women men risk vulnerability help">
 		<!-- bringing in the style sheet -->
 		<link rel="stylesheet" href="./assets/styles/style.css">
+		<!-- <script src="https://d3js.org/d3.v7.min.js"></script> -->
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<script src="//d3js.org/topojson.v1.min.js"></script>
 		<!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
 
 		<!-- <link rel="icon" href="/images/favicon.png"> -->
@@ -63,8 +66,12 @@
 					<div class = "flex-inner"><img src = "assets/images/image1.png"></div>
 				</div>
 				<p>Let’s say, workers administer the VI-SPDAT assessment on this group of homeless individuals...</p>
-				<div class = "d3-chart">
-
+				<div id = "d3-chart">
+					<!-- <p><span class = 'input-label'>non</span><div class ="label-top">0</div></p><br> -->
+					<p><span class = 'input-label'>White</span><input id="whiteInput" type="range" name="White" min="0" max="50" value="50" step="1"></p><br>
+					<p><span class = 'input-label'>Black</span><input id="blackInput" type="range" name="Black" min="0" max="50" value="40" step="1"></p><br>
+					<p><span class = 'input-label'>Hispanic</span><input id="hispanicInput" type="range" name="Hispanic" min="0" max="50" value="30" step="1"></p><br>
+					<p><span class = 'input-label'>Other</span><input id="otherInput" type="range" name="Other" min="0" max="50" value="10" step="1"></p><br>
 				</div>
 			</div>
 

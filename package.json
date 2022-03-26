@@ -15,6 +15,8 @@
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.43.4",
+    "d3": "^7.0.1",
+    "topojson": "^3.0.2",
     "vite": "^2.5.2"
   },
   "dependencies": {

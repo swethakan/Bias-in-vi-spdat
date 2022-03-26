@@ -122,6 +122,17 @@ body{
             .flex img{
                 width:100%;
             }
+            .input-label{
+               width:13%;
+               display: inline-block;
+               background-color: white;
+            }
+            input, .label-top{
+                width: 83%;
+            }
+            #d3-chart p{
+                font-family: 'Open Sans', sans-serif;
+            }
         }
     }
     

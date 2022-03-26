@@ -109,5 +109,16 @@ body #container p span {
 body #container #how .flex img {
   width: 100%;
 }
+body #container #how .input-label {
+  width: 13%;
+  display: inline-block;
+  background-color: white;
+}
+body #container #how input, body #container #how .label-top {
+  width: 83%;
+}
+body #container #how #d3-chart p {
+  font-family: "Open Sans", sans-serif;
+}
 
 /*# sourceMappingURL=style.css.map */
