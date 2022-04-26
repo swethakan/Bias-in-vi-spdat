@@ -1,9 +1,78 @@
+h2 {
+  margin: 3em 0em 1em 0em;
+}
+
 .flex {
   display: flex;
 }
 
 .flex-inner {
   width: 50%;
+}
+
+.scroll-scene {
+  min-height: 700px;
+  display: block;
+}
+
+.freeze {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 300px;
+  z-index: -2;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+td, th {
+  border-bottom: 1px solid #dddddd;
+  text-align: left;
+  padding: 10px;
+  font-weight: normal;
+}
+
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-top-color: inherit;
+  border-right-color: inherit;
+  border-bottom-color: inherit;
+  border-left-color: inherit;
+}
+thead th {
+  border-bottom: 1.5px solid #c7c7c7;
+}
+
+.scroll-top {
+  position: relative;
+}
+.scroll-top .box {
+  width: 90%;
+  margin: auto;
+  border: grey 1px solid;
+  z-index: 3;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.968);
+  border-radius: 10px;
+  margin-bottom: 0px;
+  padding: 30px 0px;
+}
+.scroll-top .box img {
+  max-width: 90%;
+}
+.scroll-top .box p {
+  font-family: "Open Sans", sans-serif !important;
+  padding: 0px 30px;
+}
+.scroll-top .box img {
+  margin: auto;
+  display: block;
 }
 
 body {
@@ -106,8 +175,29 @@ body #container p {
 body #container p span {
   background-color: #FFCDCD;
 }
+body #container #how .control p {
+  line-height: 0em;
+  margin: 0px 0px;
+  font-family: "Open Sans", sans-serif;
+}
 body #container #how .flex img {
   width: 100%;
+}
+body #container #how .key {
+  text-align: center;
+}
+body #container #how .key span {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  display: inline-block;
+}
+body #container #how span.man {
+  background-color: #816060;
+  margin-left: 15px;
+}
+body #container #how span.woman {
+  background-color: #E49494;
 }
 body #container #how .input-label {
   width: 13%;
@@ -119,6 +209,68 @@ body #container #how input, body #container #how .label-top {
 }
 body #container #how #d3-chart p {
   font-family: "Open Sans", sans-serif;
+  margin: 0.2em;
+}
+body #container #how #d3-chart p span {
+  background-color: rgba(255, 255, 255, 0);
+}
+body #container #how input[type=range] {
+  color: #909090;
+  border-top-color: initial;
+  border-top-style: none;
+  border-top-width: none;
+  border-right-color: none;
+  border-right-style: none;
+  border-right-width: none;
+  border-bottom-color: none;
+  border-bottom-style: none;
+  border-bottom-width: none;
+  border-left-color: none;
+  border-left-style: none;
+  border-left-width: none;
+  -webkit-appearance: color-well;
+}
+body #container #how input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #B12A2A;
+  border-radius: 10px;
+  cursor: pointer;
+}
+body #container #how #step7 span {
+  font-weight: 700;
+  background-color: transparent;
+}
+body #container #problem .image {
+  width: 100%;
+  padding: 30px;
+}
+body #container #problem .image img {
+  width: 100%;
+}
+body #container #problem .credit {
+  font-family: "Open Sans", sans-serif !important;
+  font-size: 12px;
+  text-align: right;
+}
+body #methodology {
+  width: 100%;
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+body #methodology .box {
+  background-color: #efefef;
+  color: #525252;
+  padding: 30px;
+  margin: auto;
+  display: block;
+  max-width: 700px;
+  border-radius: 10px;
+}
+body #methodology .box h2 {
+  margin-top: 0px;
 }
 
 /*# sourceMappingURL=style.css.map */

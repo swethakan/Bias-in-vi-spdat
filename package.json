@@ -1,5 +1,5 @@
 {
-  "name": "homework_8",
+  "name": "vispdat",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -16,10 +16,10 @@
   "devDependencies": {
     "sass": "^1.43.4",
     "d3": "^7.0.1",
-    "topojson": "^3.0.2",
     "vite": "^2.5.2"
   },
   "dependencies": {
-    "aos": "^2.3.4"
+    "aos": "^2.3.4",
+    "scroll-scene-element": "^0.1.0"
   }
 }
