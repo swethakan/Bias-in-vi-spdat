@@ -37,7 +37,7 @@
           .style("opacity", 0)
   
   
-d3.csv("/assets/data/race.csv", function(error, data){
+d3.csv("Bias-in-vi-spdat/assets/data/race.csv", function(error, data){
 
   
     var race = d3.nest()
