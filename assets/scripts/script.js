@@ -131,7 +131,7 @@ d3.csv("/assets/data/race.csv", function(error, data){
                         if(d.race == 'hispanic'){total = hispanicPop};
                         if(d.race == 'other'){total = otherPop};
                         if(index>=(total/2)){ return "#E49494"}
-                        else{return "#816060"};})
+                        else{return "#a15a5a"};})
                 .attr("class", function(d,index){
                           if(d.race == 'white'){return "white"}
                           if(d.race == 'black'){return "black"}
@@ -140,6 +140,14 @@ d3.csv("/assets/data/race.csv", function(error, data){
                           else{return "none"}
                         })
                 .style("stroke", "none")
+                .attr("rx", function(d,index){
+                              var total = 0;
+                              if(d.race == 'white'){total = whitePop};
+                              if(d.race == 'black'){total = blackPop};
+                              if(d.race == 'hispanic'){total = hispanicPop};
+                              if(d.race == 'other'){total = otherPop};
+                              if(index>=(total/2)){ return "0"}
+                              else{return "15"};})
                 // .on("mouseover", function(d){
                 //         div.transition()
                 //         .duration(100)
@@ -399,6 +407,28 @@ d3.csv("/assets/data/race.csv", function(error, data){
 
             const scenes = document.querySelectorAll('scroll-scene');
             scenes.forEach((scene) => {
+              scene.addEventListener('scroll-scene-exit', (event) => {
+                // no need to allow it to bubble up to `document`
+                    console.log("SCENE EXIT");
+                event.stopPropagation();
+
+                // "event" is a CustomEvent, giving it has a `detail` property
+                const detail = event.detail;
+                    if(detail.element.id == "step1"){
+                      if(detail.element.classList.contains("freeze"))
+                          detail.element.classList.remove("freeze");
+                      else
+                          detail.element.classList.add("freeze");
+
+                      if(detail.element.classList.contains("small")){
+                          detail.element.classList.remove("small");
+                          detail.element.classList.add("left");}
+                      else{
+                          detail.element.classList.add("small");
+                          detail.element.classList.remove("left");}
+                    }
+               
+              });
               scene.addEventListener('scroll-scene-enter', (event) => {
                 // no need to allow it to bubble up to `document`
                     console.log("SCENE ENTER");
@@ -406,9 +436,19 @@ d3.csv("/assets/data/race.csv", function(error, data){
 
                 // "event" is a CustomEvent, giving it has a `detail` property
                 const detail = event.detail;
-                    if(detail.element.id == "step1"){
-                        detail.element.classList.add("freeze");
-                    }
+                    // if(detail.element.id == "step1"){
+                    //   if(detail.element.classList.contains("freeze"))
+                    //       detail.element.classList.remove("freeze");
+                    //   else
+                    //       detail.element.classList.add("freeze");
+
+                    //   if(detail.element.classList.contains("small")){
+                    //       detail.element.classList.remove("small");
+                    //       detail.element.classList.add("left");}
+                    //   else{
+                    //       detail.element.classList.add("small");
+                    //       detail.element.classList.remove("left");}
+                    // }
                     if(detail.element.id == "step2"){
                       changeRacePercent(100, 80, 80, 80);//homeless due to trauma for race
                   }
@@ -476,3 +516,16 @@ d3.csv("/assets/data/race.csv", function(error, data){
 // 	});
 // });
   
+var lastScrollTop = 0;
+var scrolling = "down"
+
+// element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
+element.addEventListener("scroll", function(){ // or window.addEventListener("scroll"....
+   var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+   if (st > lastScrollTop){
+    scrolling = "down";
+   } else {
+    scrolling = "up"
+   }
+   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+}, false);

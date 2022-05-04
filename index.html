@@ -112,32 +112,36 @@
 			</div>
 
 			<div id = "how">
-				<h2>Here's how it happens</h2>
-				<div class = "flex">
-					<div class = "flex-inner">
-						<p>The VI-SPDAT is given by aid workers directly to homeless people. They can be on the streets, in a shelter, or seeking aid elsewhere. </p>
-						<p>Often times, aid workers will visit homeless villages to administer VI-SPDAT testslike the one pictured to the right.</p>
+				<div id = "how-intro">
+					<h2>Here's how it happens</h2>
+					<div class = "flex">
+						<div class = "flex-inner">
+							<p>The VI-SPDAT is given by aid workers directly to homeless people. They can be on the streets, in a shelter, or seeking aid elsewhere. </p>
+							<p>Often times, aid workers will visit homeless villages to administer VI-SPDAT testslike the one pictured to the right.</p>
+						</div>
+						<div class = "flex-inner"><img src = "assets/images/image1.png"></div>
 					</div>
-					<div class = "flex-inner"><img src = "assets/images/image1.png"></div>
-				</div>
-				<p style = "margin-bottom: 60px;">Let’s say, workers administer the VI-SPDAT assessment on this group of homeless individuals...</p>
-				<!-- <button id = "testButton">Practice transition</button> -->
-				<div class = "control">
-				<p><span class = 'input-label' style = "color: white;">Key</span><span style = "width:42%;display: inline-block;">0</span><span style = "text-align: right;width:42%;display: inline-block;">100</span></p><br>
-				<p><span class = 'input-label'>White</span><input id="whiteInput" type="range" name="White" min="0" max="100" value="100" step="1"></p><br>
-				<p><span class = 'input-label'>Black</span><input id="blackInput" type="range" name="Black" min="0" max="100" value="100" step="1"></p><br>
-				<!-- <p><span class = 'input-label'>Hispanic</span><input id="hispanicInput" type="range" name="Hispanic" min="0" max="50" value="30" step="1"></p><br>
-				<p><span class = 'input-label'>Other</span><input id="otherInput" type="range" name="Other" min="0" max="50" value="10" step="1"></p><br> -->
+					<p style = "margin-bottom: 30px; font-weight: normal;">To <b>visualize this scenerio</b>, let’s say workers administer the VI-SPDAT assessment on this group of homeless individuals.</p>
+					<h4 style = "margin-bottom: 50px;font-size: 14px; font-weight: normal; text-align: center;"><b>Use the sliders below</b> to adjust a given population of homeless idividuals.<br>By the end of this scenerio, you will see which group recieves the most help.</h4>
+					<!-- <button id = "testButton">Practice transition</button> -->
+					<div class = "control">
+					<p><span class = 'input-label' style = "color: white;">Key</span><span style = "width:42%;display: inline-block;">0</span><span style = "text-align: right;width:42%;display: inline-block;">100 homeless people</span></p><br>
+					<p><span class = 'input-label'>White</span><input id="whiteInput" type="range" name="White" min="0" max="100" value="100" step="1"></p><br>
+					<p><span class = 'input-label'>Black</span><input id="blackInput" type="range" name="Black" min="0" max="100" value="100" step="1"></p><br>
+					<!-- <p><span class = 'input-label'>Hispanic</span><input id="hispanicInput" type="range" name="Hispanic" min="0" max="50" value="30" step="1"></p><br>
+					<p><span class = 'input-label'>Other</span><input id="otherInput" type="range" name="Other" min="0" max="50" value="10" step="1"></p><br> -->
+					
+					</div>
 				</div>
 
 				<div class="scrollytelling-container">
-					<scroll-scene class="scroll-scene" id = "step1">
+					<scroll-scene class="scroll-scene small" id = "step1">
 						<div id = "d3-chart">
 							<!-- <p><span class = 'input-label'>non</span><div class ="label-top">0</div></p><br> -->
 							<div class = "key"><span class = "woman"></span> = women<span class = "man"></span> = men</div>
 						</div>
 					</scroll-scene >
-					<scroll-scene class="scroll-scene scroll-top" id = "step2">
+					<scroll-scene class="scroll-scene scroll-top side-step" id = "step2">
 						<div class = "box">
 							<p>When aid workers administer the VI-SPDAT test, they are given a script to let participants know the purpose of the test, the duration, and whether or not they would like to participate.
 							</p>
@@ -145,19 +149,19 @@
 							<p><b>This already leaves out some people</b> who do not trust aid workers enough to participate in the test. According to Cronley’s report, Black individuals are more likely not to accept aid. </p>
 						</div>
 					</scroll-scene>
-					<scroll-scene class="scroll-scene scroll-top" id = "step3">
+					<scroll-scene class="scroll-scene scroll-top side-step" id = "step3">
 						<div class = "box">
 							<p>Some of the following questions then ask about a person’s homeless history. <b>This starts skewing the test towards women</b> who are more likely to have used emergency rooms, ambulance services, and crisis services more in the past six months compared to men. </p>
 							<img src = "assets/images/step2.png">
 						</div>
 					</scroll-scene>
-					<scroll-scene class="scroll-scene scroll-top" id = "step4">
+					<scroll-scene class="scroll-scene scroll-top side-step" id = "step4">
 						<div class = "box">
 							<p>White people are also more more likely to report being homeless due to trauma as compared to Black people. This nets them another point on the assessment.</p>
 							<img src = "assets/images/step3.png">
 						</div>
 					</scroll-scene>
-					<scroll-scene class="scroll-scene scroll-top" id = "step5">
+					<scroll-scene class="scroll-scene scroll-top side-step" id = "step5">
 						<div class = "box">
 							<p>In some instances on the VI-SPDAT, Black people actually reported a higher probability of protective factors. For example, a higher percentage of Black people reported receiving money or some form of financial support while homeless.</p>
 							<p>This leads to white people gaining more traction in the assessment.</p>
@@ -165,16 +169,16 @@
 						</div>
 					</scroll-scene>
 
-					<scroll-scene class="scroll-scene scroll-top" id = "step6">
+					<scroll-scene class="scroll-scene scroll-top side-step" id = "step6">
 						<div class = "box">
 							<p>In general, white women scored the highest in almost all the sub scales of the VI-SPDAT followed by white men then Black women and men. This included aspects like self-reporting that they were on medication or that drug use was a cause of their loss of housing.</p>							<img src = "assets/images/step5.png">
 						</div>
 					</scroll-scene>
 
-					<scroll-scene class="scroll-scene scroll-top" id = "step7">
+					<scroll-scene class="scroll-scene scroll-top side-step" id = "step7">
 						<div class = "box">
 							<p>This model isn't perfect. It's based on limitted data gathered by one study by Courtney Cronley and can only show a rudimentary view of who may be assessed most at-risk byt the VI-SPDAT.</p>
-							<p>According to the model, the most at-risk individuals are <span id = "white-female-percent"></span>% of white women, <span id = "white-male-percent"></span>% of white Men, <span id = "black-female-percent"></span>% of Black women, and <span id = "black-male-percent"></span>% of Black men. </p>
+							<p ><b>According to the model on the left</b>, the most at-risk individuals are:</p><p style = "text-align: center;"> <span id = "white-female-percent"></span>% of white women</p> <p style = "text-align: center;"><span id = "white-male-percent"></span>% of white men</p><p style = "text-align: center;"><span id = "black-female-percent"></span>% of Black women</p> <p style = "text-align: center;"><span id = "black-male-percent"></span>% of Black men. </p>
 						</div>
 					</scroll-scene>
 

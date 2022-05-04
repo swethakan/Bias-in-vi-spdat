@@ -171,9 +171,12 @@ body{
         margin-top:0px;
     }
     #container{
-        margin: auto;
-        display: block;
-        max-width: 700px;
+        #Introduction, #problem, #so_what, #implication, #how-intro, .small{
+            margin: auto;
+            display: block;
+            max-width: 700px;
+        }
+    
         p{
             font-family: Georgia,serif;
             line-height: 1.55;
@@ -185,6 +188,16 @@ body{
         }
 
         #how{
+            #step1.left{
+                max-width: 95%;
+                margin: auto;
+            }
+            .side-step{
+                max-width: 600px;
+                margin-right: 40px;
+                margin-left: auto;
+                display: block;
+            }
             .control p{
                 line-height: 0em;
                 margin: 0px 0px;
@@ -203,7 +216,8 @@ body{
                 display: inline-block;
             }
             span.man{
-                background-color: #816060;
+                background-color: #a15a5a;
+                border-radius: 15px;
                 margin-left: 15px;
             }
             span.woman{
@@ -216,6 +230,9 @@ body{
             }
             input, .label-top{
                 width: 83%;
+            }
+            #d3-chart{
+                max-width: 700px;
             }
             #d3-chart p{
                 font-family: 'Open Sans', sans-serif;
