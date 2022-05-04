@@ -176,6 +176,9 @@ body{
         margin-top:0px;
     }
     #container{
+        margin: auto;
+        display: block;
+        max-width: 1400px;
         #Introduction, #problem, #so_what, #implications, #how-intro, .small{
             margin: auto;
             display: block;

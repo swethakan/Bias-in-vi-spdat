@@ -165,6 +165,11 @@ body .image-caption {
   color: grey;
   margin-top: 0px;
 }
+body #container {
+  margin: auto;
+  display: block;
+  max-width: 1400px;
+}
 body #container #Introduction, body #container #problem, body #container #so_what, body #container #implications, body #container #how-intro, body #container .small {
   margin: auto;
   display: block;
