@@ -182,8 +182,7 @@ d3.csv("./assets/data/race.csv", function(error, data){
             d3.select("#testButton").on("click", changeTransition )
 
             function changeTransition(){   
-                console.log("CLICK");
-                
+
                 plots.selectAll("rect")
                 .transition()
                 .style("fill", "grey")
@@ -392,12 +391,7 @@ d3.csv("./assets/data/race.csv", function(error, data){
                                         }
                                       }
                                       return this.style.opacity})
-              console.log("whiteFNum = "+whiteFNum);
-              console.log("whiteMNum = "+whiteMNum);
-              console.log("blackFNum = "+blackFNum);
-              console.log("blackMNum = "+blackMNum);
-              console.log("whitePop = "+whitePop);
-              console.log("blackPop = "+blackPop);
+
 
               whiteWomenElement.innerText = ((whiteFNum/(whitePop/2))*100).toFixed();
               whiteMenElement.innerText = ((whiteMNum/(whitePop/2))*100).toFixed();
@@ -409,7 +403,6 @@ d3.csv("./assets/data/race.csv", function(error, data){
             scenes.forEach((scene) => {
               scene.addEventListener('scroll-scene-exit', (event) => {
                 // no need to allow it to bubble up to `document`
-                    console.log("SCENE EXIT");
                 event.stopPropagation();
 
                 // "event" is a CustomEvent, giving it has a `detail` property
@@ -431,7 +424,6 @@ d3.csv("./assets/data/race.csv", function(error, data){
               });
               scene.addEventListener('scroll-scene-enter', (event) => {
                 // no need to allow it to bubble up to `document`
-                    console.log("SCENE ENTER");
                 event.stopPropagation();
 
                 // "event" is a CustomEvent, giving it has a `detail` property

@@ -21,6 +21,10 @@ h2 {
   top: 300px;
   z-index: -2;
 }
+.freeze .warning {
+  height: 0px;
+  display: none;
+}
 
 table {
   border-collapse: collapse;
@@ -161,7 +165,7 @@ body .image-caption {
   color: grey;
   margin-top: 0px;
 }
-body #container #Introduction, body #container #problem, body #container #so_what, body #container #implication, body #container #how-intro, body #container .small {
+body #container #Introduction, body #container #problem, body #container #so_what, body #container #implications, body #container #how-intro, body #container .small {
   margin: auto;
   display: block;
   max-width: 700px;

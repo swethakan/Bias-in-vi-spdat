@@ -24,6 +24,11 @@ h2{
     position: sticky;
     top: 300px;
     z-index: -2;
+
+    .warning{
+        height: 0px;
+        display: none;
+    }
 }
 table {
     
@@ -171,7 +176,7 @@ body{
         margin-top:0px;
     }
     #container{
-        #Introduction, #problem, #so_what, #implication, #how-intro, .small{
+        #Introduction, #problem, #so_what, #implications, #how-intro, .small{
             margin: auto;
             display: block;
             max-width: 700px;
