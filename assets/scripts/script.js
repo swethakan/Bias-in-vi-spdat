@@ -4,6 +4,8 @@
   var h = 320
   var numCols = 10;
   
+  scrollRefresh = 0;
+
   var margin = {
     right: 0,
     left: 0,
@@ -407,19 +409,20 @@ d3.csv("./assets/data/race.csv", function(error, data){
 
                 // "event" is a CustomEvent, giving it has a `detail` property
                 const detail = event.detail;
-                    if(detail.element.id == "step1"){
-                      if(detail.element.classList.contains("freeze"))
+                    if(detail.element.id == "step1" ){
+                      if(detail.element.classList.contains("freeze") && scrollRefresh>=1)
                           detail.element.classList.remove("freeze");
                       else
                           detail.element.classList.add("freeze");
 
-                      if(detail.element.classList.contains("small")){
+                      if(detail.element.classList.contains("small") && scrollRefresh>=1){
                           detail.element.classList.remove("small");
                           detail.element.classList.add("left");}
                       else{
                           detail.element.classList.add("small");
                           detail.element.classList.remove("left");}
                     }
+                    scrollRefresh +=1;
                
               });
               scene.addEventListener('scroll-scene-enter', (event) => {
@@ -428,7 +431,8 @@ d3.csv("./assets/data/race.csv", function(error, data){
 
                 // "event" is a CustomEvent, giving it has a `detail` property
                 const detail = event.detail;
-                    // if(detail.element.id == "step1"){
+                     if(detail.element.id == "step1"){
+                      scrollRefresh +=1;
                     //   if(detail.element.classList.contains("freeze"))
                     //       detail.element.classList.remove("freeze");
                     //   else
@@ -440,8 +444,9 @@ d3.csv("./assets/data/race.csv", function(error, data){
                     //   else{
                     //       detail.element.classList.add("small");
                     //       detail.element.classList.remove("left");}
-                    // }
+                     }
                     if(detail.element.id == "step2"){
+                      scrollRefresh +=1;
                       changeRacePercent(100, 80, 80, 80);//homeless due to trauma for race
                   }
                     if(detail.element.id == "step3"){
