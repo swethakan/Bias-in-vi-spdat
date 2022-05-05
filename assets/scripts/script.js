@@ -433,17 +433,16 @@ d3.csv("./assets/data/race.csv", function(error, data){
                 const detail = event.detail;
                      if(detail.element.id == "step1"){
                       scrollRefresh +=1;
-                    //   if(detail.element.classList.contains("freeze"))
-                    //       detail.element.classList.remove("freeze");
-                    //   else
-                    //       detail.element.classList.add("freeze");
+                      if(scrollRefresh == 8){
+                        if(detail.element.classList.contains("small") && scrollRefresh>=1){
+                          detail.element.classList.remove("small");
+                          detail.element.classList.add("left");}
+                      else{
+                          detail.element.classList.add("small");
+                          detail.element.classList.remove("left");}
 
-                    //   if(detail.element.classList.contains("small")){
-                    //       detail.element.classList.remove("small");
-                    //       detail.element.classList.add("left");}
-                    //   else{
-                    //       detail.element.classList.add("small");
-                    //       detail.element.classList.remove("left");}
+                      }
+                      console.log("scrollRefresh = "+scrollRefresh)
                      }
                     if(detail.element.id == "step2"){
                       scrollRefresh +=1;
